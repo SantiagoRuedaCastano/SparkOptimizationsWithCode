@@ -135,7 +135,10 @@ spark.conf.set("spark.speculation", "true")
 ## Adaptive  Query Execution (AQE)
 AQE optimizes query execution plans dyhnamically based on runtime statistics, such as the actual size of data processed, leading to more efficientquery execution.
 ```scala
-spark.conf.set("spark.sql.adaptive.enabled", "true")
+spark.conf.set("spark.sql.adaptive.enabled", true)
+spark.conf.set("spark.sql.adaptive.skewJoin.enabled", true)
+spark.conf.set("spark.sql.adaptive.skewJoin.skewedPartitionFactor", 5)
+spark.conf.set("spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes", "64MB")
 ```
 
 ## Dynamic Partition Pruning
