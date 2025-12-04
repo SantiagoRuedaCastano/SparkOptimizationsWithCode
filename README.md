@@ -45,7 +45,7 @@ val broadcastVar = sc.broadcast([1, 2, 3])
 ```
 
 ## Columnar format
-Using columnar format like Parquet or ORC can improve read performance by allowing Spark to read onlythe neccessary columns. The formats also support efficient compressions and encoding schemas
+Using columnar format like Parquet or ORC can improve read performance by allowing Spark to read only the neccessary columns. The formats also support efficient compressions and encoding schemas
 ```scala
 df.write.parquet("path/to/parquet/file")
 ```
